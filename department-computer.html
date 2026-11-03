@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แผนกวิชาคอมพิวเตอร์ - วิทยาลัยเทคนิคนางรอง</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 🔗 ลิงก์เชื่อมโยงกับไฟล์สีหลังบ้าน -->
+    <link rel="stylesheet" href="style.css">
+    <script> tailwind.config = { darkMode: 'class' } </script>
+</head>
+<body class="transition-colors duration-300">
+
+    <!-- เมนูหลัก -->
+    <nav class="theme-nav text-white p-4 flex justify-between items-center sticky top-0 shadow-lg z-50">
+        <h1 class="font-bold text-xl theme-text-accent">วิทยาลัยเทคนิคนางรอง</h1>
+        <div class="flex items-center space-x-4">
+            <a href="index.html" class="hover:opacity-80">หน้าแรก</a>
+            <a href="department-computer.html" class="underline font-bold theme-text-accent">แผนกคอมพิวเตอร์</a>
+            <a href="map.html" class="hover:opacity-80">แผนที่ & ผัง</a>
+            <a href="contact.html" class="hover:opacity-80">ติดต่อเรา</a>
+            <button onclick="toggleDarkMode()" class="p-2 border rounded-lg text-sm bg-black/20 hover:bg-black/40">🌙 / ☀️ โหมด</button>
+        </div>
+    </nav>
+
+    <!-- ส่วนหัวข้อและโลโก้แผนก -->
+    <header class="max-w-4xl mx-auto my-8 p-8 theme-card rounded-xl shadow-md border text-center">
+        <img src="img/โลโก้ แผนกคอม.jpg" class="w-32 h-32 object-cover mx-auto rounded-full shadow-lg mb-4 border-2" alt="โลโก้แผนกคอมพิวเตอร์">
+        <h2 class="text-3xl font-extrabold mb-2 theme-text-accent">แผนกวิชาคอมพิวเตอร์</h2>
+        <p class="theme-text-muted">วิทยาลัยเทคนิคนางรอง (Information Technology & Digital Business)</p>
+    </header>
+
+    <!-- ข้อมูลหลัก: สาขาวิชาที่เปิดสอน -->
+    <section class="max-w-4xl mx-auto my-8 p-6 theme-card rounded-xl shadow-md border">
+        <h3 class="text-2xl font-bold theme-text-accent mb-4 border-b pb-2">📚 สาขาวิชาที่เปิดสอน</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-4 rounded-lg border theme-card shadow-sm">
+                <h4 class="font-bold text-lg mb-2 text-emerald-600 dark:text-emerald-400">1. สาขาวิชาเทคโนโลยีสารสนเทศ</h4>
+                <p class="theme-text-muted text-sm">เรียนรู้เกี่ยวกับการพัฒนาซอฟต์แวร์ ระบบเครือข่ายคอมพิวเตอร์ ฐานข้อมูล และการเขียนโปรแกรมประยุกต์ใช้งานจริง</p>
+            </div>
+            <div class="p-4 rounded-lg border theme-card shadow-sm">
+                <h4 class="font-bold text-lg mb-2 text-emerald-600 dark:text-emerald-400">2. สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล</h4>
+                <p class="theme-text-muted text-sm">เน้นการประยุกต์ใช้เทคโนโลยีในงานธุรกิจ การตลาดดิจิทัล การทำสื่อกราฟิก และการตัดต่อวิดีโอเพื่อธุรกิจยุคใหม่</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🖼️ ภาพบรรยากาศและการเรียนการสอน + ปุ่มดูเพิ่มเติม -->
+    <section class="max-w-4xl mx-auto my-8 p-6 theme-card rounded-xl shadow-md border">
+        <div class="flex justify-between items-center mb-4 border-b pb-2">
+            <h3 class="text-2xl font-bold theme-text-accent">🖼️ ภาพบรรยากาศและการเรียนการสอน</h3>
+            <!-- ปุ่มดูเพิ่มเติมไปหน้าแกลเลอรี -->
+            <a href="gallery.html" class="theme-btn-accent text-sm py-1.5 px-4 rounded-lg font-bold shadow transition">
+                ดูเพิ่มเติม (แกลเลอรี) ➡️
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <div>
+                <img src="img/LC2.jpg" class="w-full h-36 object-cover rounded-lg shadow border" alt="กิจกรรม 1">
+                <p class="text-xs text-center mt-1 theme-text-muted">บรรยากาศ LUCK COM ในงานประเมินศูนย์บ่มเพาะฯ</p>
+            </div>
+            <div>
+                <img src="img/LC.jpg" class="w-full h-36 object-cover rounded-lg shadow border" alt="กิจกรรม 2">
+                <p class="text-xs text-center mt-1 theme-text-muted">ธุรกิจ LUCK COM คว้าระดับ 4 ดาว</p>
+            </div>
+            <div>
+                <img src="img/ภาพการสอน.1.jpg" class="w-full h-36 object-cover rounded-lg shadow border" alt="กิจกรรม 3">
+                <p class="text-xs text-center mt-1 theme-text-muted">บรรยากาศการเรียนการสอน</p>
+            </div>
+            <div>
+                <img src="img/ภาพการเรียนการสอน.2.jpg" class="w-full h-36 object-cover rounded-lg shadow border" alt="กิจกรรม 4">
+                <p class="text-xs text-center mt-1 theme-text-muted">บรรยากาศการเรียนการสอน</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🗺️ แผนผังห้องเรียน -->
+    <section class="max-w-4xl mx-auto my-8 p-6 theme-card rounded-xl shadow-md border">
+        <h3 class="text-2xl font-bold theme-text-accent mb-4 border-b pb-2">🗺️ แผนผังห้องเรียนและอาคารปฏิบัติการ</h3>
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- 📷 ช่องใส่รูปแผนผังห้องเรียน ขนาด 2048x1365 -->
+            <img src="img/ตารางห้องเรียน.jpg" width="2048" height="1365" class="w-full h-auto max-h-[600px] object-contain mx-auto rounded-lg shadow border mb-2" alt="แผนผังห้องเรียนคอมพิวเตอร์">
+            <p class="text-sm theme-text-muted">แผนผังแสดงตำแหน่งห้องเรียนและห้องปฏิบัติการคอมพิวเตอร์ ชั้น 2 ตึก 2</p>
+        </div>
+    </section>
+
+    <!-- 👥 บุคลากรแผนกวิชาคอมพิวเตอร์ (หัวหน้า 1 ช่อง + ตำแหน่งอื่นๆ 6 ช่อง) -->
+    <section class="max-w-4xl mx-auto my-8 p-6 theme-card rounded-xl shadow-md border">
+        <h3 class="text-2xl font-bold theme-text-accent mb-6 border-b pb-2">👥 บุคลากรแผนกวิชาคอมพิวเตอร์</h3>
+
+        <!-- หัวหน้าแผนก (1 ช่องด้านบน ขนาดใหญ่เด่นชัด) -->
+        <div class="max-w-sm mx-auto mb-8 text-center p-5 rounded-xl border theme-card shadow-lg bg-emerald-50/50 dark:bg-emerald-950/20">
+            <img src="img/ครูมยุรี.jpg" class="w-32 h-32 object-cover mx-auto rounded-full shadow border-2 mb-3" alt="หัวหน้าแผนก">
+            <h4 class="font-bold text-lg">นางสาวมยุรี พงษ์อาภา</h4>
+            <p class="theme-text-accent font-semibold text-sm">ตำแหน่ง ครูชำนาญการพิเศษ  </p>
+            <p class="text-xs theme-text-muted mt-1">หัวหน้าแผนกวิชาคอมพิวเตอร์</p>
+        </div>
+
+        <!-- ครูผู้สอน / ตำแหน่งต่างๆ (6 ช่องด้านล่าง) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- บุคลากร 1 -->
+            <div class="text-center p-4 rounded-xl border theme-card shadow-sm">
+                <img src="img/ครูอุดม.jpg" class="w-24 h-24 object-cover mx-auto rounded-full shadow border mb-2" alt="ครูผู้สอน">
+                <h5 class="font-bold text-base">นายอุดม สติภา</h5>
+                <p class="theme-text-accent text-xs font-semibold">ตำแหน่ง ครูชำนาญการ</p>
+            </div>
+            <!-- บุคลากร 2 -->
+            <div class="text-center p-4 rounded-xl border theme-card shadow-sm">
+                <img src="img/ครูลิตา.jpg" class="w-24 h-24 object-cover mx-auto rounded-full shadow border mb-2" alt="ครูผู้สอน">
+                <h5 class="font-bold text-base">นางสาวลิตา วรรณตรง</h5>
+                <p class="theme-text-accent text-xs font-semibold">ตำแหน่ง ครูชำนาญการ </p>
+            </div>
+            <!-- บุคลากร 3 -->
+            <div class="text-center p-4 rounded-xl border theme-card shadow-sm">
+                <img src="img/ครูจรัส.jpg" class="w-24 h-24 object-cover mx-auto rounded-full shadow border mb-2" alt="ครูผู้สอน">
+                <h5 class="font-bold text-base">นางจรัสศรี  ร่มเย็น</h5>
+                <p class="theme-text-accent text-xs font-semibold">ตำแหน่ง ครู </p>
+            </div>
+            <!-- บุคลากร 4 -->
+            <div class="text-center p-4 rounded-xl border theme-card shadow-sm">
+                <img src="img/ครูเฟิร์ส.jpg" class="w-24 h-24 object-cover mx-auto rounded-full shadow border mb-2" alt="ครูผู้สอน">
+                <h5 class="font-bold text-base">นางสาวศิรประภา รอดจากเข็ญ</h5>
+                <p class="theme-text-accent text-xs font-semibold">ตำแหน่ง พนักงานราชการ (ครู)</p>
+            </div>
+            <!-- บุคลากร 5 -->
+            <div class="text-center p-4 rounded-xl border theme-card shadow-sm">
+                <img src="img/ครูชัช.jpg" class="w-24 h-24 object-cover mx-auto rounded-full shadow border mb-2" alt="ครูผู้สอน">
+                <h5 class="font-bold text-base">นายชัฏชกริช ต้นสิริธนโสภา</h5>
+                <p class="theme-text-accent text-xs font-semibold">ตำแหน่ง พนักงานราชการ (ครู)</p>
+            </div>
+            <!-- บุคลากร 6 -->
+            <div class="text-center p-4 rounded-xl border theme-card shadow-sm">
+                <img src="img/ครูเก๋.jpg" class="w-24 h-24 object-cover mx-auto rounded-full shadow border mb-2" alt="ครูผู้สอน">
+                <h5 class="font-bold text-base">นางสาวกิติยาภรณ์  พะเนตรรัมย์  </h5>
+                <p class="theme-text-accent text-xs font-semibold">ตำแหน่ง ครูพิเศษสอน</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ข้อมูลติดต่อและลิงก์ Facebook -->
+    <section class="max-w-4xl mx-auto my-8 p-6 theme-card rounded-xl shadow-md border">
+        <h3 class="text-2xl font-bold theme-text-accent mb-4 border-b pb-2">📞 ข้อมูลติดต่อแผนกวิชา</h3>
+        <div class="space-y-3 theme-text-muted mb-6">
+            <p>📍 <strong>ที่อยู่:</strong> ตึก 2 อาคารปฏิบัติการ เลขที่ 1 หมู่ 1 ถนนบ้านเก่า-แพงพวย ต.นางรอง อ.นางรอง จ.บุรีรัมย์ 31110</p>
+            <p>📞 <strong>เบอร์โทรศัพท์:</strong> 044-631-556</p>
+        </div>
+        
+        <div class="text-center">
+            <a href="https://www.facebook.com/profile.php?id=61576007542343&locale=th_TH" target="_blank" class="inline-block theme-btn-primary font-bold py-3 px-8 rounded-xl shadow-lg transition">
+                🌐 ติดตามข่าวสารผ่าน Facebook แผนก
+            </a>
+        </div>
+    </section>
+
+    <!-- ปุ่มย้อนกลับหน้าแรก -->
+    <div class="max-w-4xl mx-auto my-8 text-center">
+        <a href="index.html" class="inline-block theme-btn-accent py-2 px-6 rounded-lg font-bold shadow transition">⬅️ กลับสู่หน้าแรก</a>
+    </div>
+
+    <!-- สคริปต์สลับ Dark/Light Mode -->
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+    </script>
+</body>
+</html>

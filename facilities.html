@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สิ่งอำนวยความสะดวก - วิทยาลัยเทคนิคนางรอง</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 🔗 ลิงก์เชื่อมโยงกับไฟล์สีหลังบ้าน -->
+    <link rel="stylesheet" href="style.css">
+    <script> tailwind.config = { darkMode: 'class' } </script>
+</head>
+<body class="transition-colors duration-300">
+
+    <!-- เมนูหลัก -->
+    <nav class="theme-nav text-white p-4 flex justify-between items-center sticky top-0 shadow-lg z-50">
+        <h1 class="font-bold text-xl theme-text-accent">วิทยาลัยเทคนิคนางรอง</h1>
+        <div class="flex items-center space-x-3 text-sm md:text-base">
+            <a href="index.html" class="hover:opacity-85">หน้าแรก</a>
+            <a href="history.html" class="hover:opacity-85">ประวัติวิทยาลัย</a>
+            <a href="facilities.html" class="underline font-bold theme-text-accent">สิ่งอำนวยความสะดวก</a>
+            <a href="buildings.html" class="hover:opacity-85">ทำเนียบอาคาร</a>
+            <a href="map.html" class="hover:opacity-85">แผนที่ & ผัง</a>
+            <a href="contact.html" class="hover:opacity-85">ติดต่อเรา</a>
+            <button onclick="toggleDarkMode()" class="p-2 border rounded-lg text-xs bg-black/20 hover:bg-black/40">🌙 / ☀️ โหมด</button>
+        </div>
+    </nav>
+
+    <!-- ส่วนหัวข้อหลัก -->
+    <header class="max-w-5xl mx-auto my-8 p-8 theme-card rounded-xl shadow-md border text-center">
+        <h2 class="text-3xl font-extrabold mb-2 theme-text-accent">✨ สิ่งอำนวยความสะดวกภายในวิทยาลัย</h2>
+        <p class="theme-text-muted">ศูนย์รวมสิ่งอำนวยความสะดวกเพื่อสนับสนุนการเรียนรู้ สุขภาพ และชีวิตในวิทยาลัยเทคนิคนางรอง</p>
+    </header>
+
+    <!-- คลังสิ่งอำนวยความสะดวกจำแนกตามหมวดหมู่ -->
+    <section class="max-w-5xl mx-auto my-8 p-6 theme-card rounded-xl shadow-md border">
+        <h3 class="text-2xl font-bold theme-text-accent mb-6 border-b pb-2">📌 หมวดหมู่สิ่งอำนวยความสะดวก</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- 1. โรงอาหารกลาง & อาคารแพงพวย -->
+            <div class="theme-card rounded-xl border p-5 shadow-sm hover:shadow-md transition">
+                <div class="flex items-center space-x-3 mb-3">
+                    <span class="text-3xl">🍲</span>
+                    <div>
+                        <h4 class="font-bold text-lg theme-text-accent">โรงอาหารกลาง & อาคารแพงพวย</h4>
+                        <p class="text-xs theme-text-muted">ศูนย์อาหารและเครื่องดื่มมาตรฐานสุขาภิบาล</p>
+                    </div>
+                </div>
+                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted">
+                    <p>• ร้านจำหน่ายอาหารหลากหลาย ทั้งข้าวแกง ก๋วยเตี๋ยว และอาหารตามสั่ง</p>
+                    <p>• ซุ้มจำหน่ายเครื่องดื่ม ผลไม้สด และของกินเล่นสำหรับนักศึกษา</p>
+                    <p>• มีที่นั่งรองรับบุคลากรและนักศึกษาอย่างเพียงพอ ถูกสุขอนามัย</p>
+                </div>
+            </div>
+
+            <!-- 2. ร้านค้าสหกรณ์วิทยาลัย -->
+            <div class="theme-card rounded-xl border p-5 shadow-sm hover:shadow-md transition">
+                <div class="flex items-center space-x-3 mb-3">
+                    <span class="text-3xl">🛒</span>
+                    <div>
+                        <h4 class="font-bold text-lg theme-text-accent">ร้านค้าสหกรณ์สวัสดิการ</h4>
+                        <p class="text-xs theme-text-muted">จุดบริการเครื่องเขียนและอุปกรณ์การเรียน</p>
+                    </div>
+                </div>
+                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted">
+                    <p>• จำหน่ายอุปกรณ์การเรียน สมุด เครื่องเขียน และเครื่องมือทางช่าง</p>
+                    <p>• เครื่องแบบนักเรียน-นักศึกษา เข็มตราสัญลักษณ์ และอุปกรณ์ประกอบเครื่องแบบ</p>
+                    <p>• สินค้าอุปโภคบริโภคและขนมขบเคี้ยวในราคาถูก</p>
+                </div>
+            </div>
+
+            <!-- 3. ห้องสวัสดิการพยาบาล -->
+            <div class="theme-card rounded-xl border p-5 shadow-sm hover:shadow-md transition">
+                <div class="flex items-center space-x-3 mb-3">
+                    <span class="text-3xl">🏥</span>
+                    <div>
+                        <h4 class="font-bold text-lg theme-text-accent">ห้องพยาบาล & สวัสดิการสุขภาพ</h4>
+                        <p class="text-xs theme-text-muted">บริการดูแลสุขภาพเบื้องต้นและปฐมพยาบาล</p>
+                    </div>
+                </div>
+                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted">
+                    <p>• บริการปฐมพยาบาลเบื้องต้น เตียงพักฟื้น ยา และเวชภัณฑ์พื้นฐาน</p>
+                    <p>• จุดบริการรับชุดเครื่องแบบและอุปกรณ์การเรียนตามกำหนดการวิทยาลัย</p>
+                    <p>• ประสานงานส่งต่อโรงพยาบาลในกรณีเจ็บป่วยฉุกเฉิน</p>
+                </div>
+            </div>
+
+            <!-- 4. ศูนย์เทคโนโลยีสารสนเทศ & ห้องสมุด -->
+            <div class="theme-card rounded-xl border p-5 shadow-sm hover:shadow-md transition">
+                <div class="flex items-center space-x-3 mb-3">
+                    <span class="text-3xl">📖</span>
+                    <div>
+                        <h4 class="font-bold text-lg theme-text-accent">ห้องสมุด & อาคารวิทยบริการ</h4>
+                        <p class="text-xs theme-text-muted">ศูนย์รวมแหล่งค้นคว้าและอินเทอร์เน็ตความเร็วสูง</p>
+                    </div>
+                </div>
+                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted">
+                    <p>• บริการยืม-คืน หนังสือเรียน ตำราวิชาชีพ และวารสารวิชาการ</p>
+                    <p>• ห้องปฏิบัติการ ComIT (1-4) สำหรับสืบค้นข้อมูลและใช้งานคอมพิวเตอร์</p>
+                    <p>• สัญญาณ Wi-Fi ครอบคลุมพื้นที่การเรียนรู้</p>
+                </div>
+            </div>
+
+            <!-- 5. สนามกีฬา & โดมอเนกประสงค์ -->
+            <div class="theme-card rounded-xl border p-5 shadow-sm hover:shadow-md transition">
+                <div class="flex items-center space-x-3 mb-3">
+                    <span class="text-3xl">⚽</span>
+                    <div>
+                        <h4 class="font-bold text-lg theme-text-accent">โดมอเนกประสงค์ & สนามกีฬา</h4>
+                        <p class="text-xs theme-text-muted">พื้นที่ออกกำลังกาย เล่นกีฬา และนันทนาการ</p>
+                    </div>
+                </div>
+                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted">
+                    <p>• สนามฟุตบอลมาตรฐานสำหรับกิจกรรมการแข่งขันและพลศึกษา</p>
+                    <p>• โดมอเนกประสงค์ (หลังเก่า/หลังใหม่) รองรับบาสเกตบอล วอลเลย์บอล และตะกร้อ</p>
+                    <p>• ลานกิจกรรมเคารพธงชาติและเข้าแถวประจำวัน</p>
+                </div>
+            </div>
+
+            <!-- 6. ลานฝึกขับขี่ปลอดภัย & โรงจอดรถ -->
+            <div class="theme-card rounded-xl border p-5 shadow-sm hover:shadow-md transition">
+                <div class="flex items-center space-x-3 mb-3">
+                    <span class="text-3xl">🛵</span>
+                    <div>
+                        <h4 class="font-bold text-lg theme-text-accent">ลานขับขี่ปลอดภัย & โรงจอดรถ</h4>
+                        <p class="text-xs theme-text-muted">บริการจราจรและการจอดยานพาหนะอย่างเป็นระเบียบ</p>
+                    </div>
+                </div>
+                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted">
+                    <p>• โรงจอดรถจักรยานยนต์ขนาดใหญ่ มีหลังคาป้องกันแดดและฝน</p>
+                    <p>• ลานฝึกขับขี่ปลอดภัย เสริมสร้างวินัยจราจรและทักษะการขับขี่</p>
+                    <p>• เจ้าหน้าที่รักษาความปลอดภัยคอยดูแลและจัดระเบียบทางเข้า-ออก</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ปุ่มย้อนกลับและลิงก์เชื่อมโยง -->
+    <div class="max-w-4xl mx-auto my-8 text-center space-x-3">
+        <a href="buildings.html" class="inline-block theme-btn-primary py-2.5 px-6 rounded-lg font-bold shadow transition">🏢 ดูทำเนียบอาคาร</a>
+        <a href="index.html" class="inline-block theme-btn-accent py-2.5 px-6 rounded-lg font-bold shadow transition">⬅️ กลับสู่หน้าแรก</a>
+    </div>
+
+    <!-- สคริปต์สลับ Dark/Light Mode -->
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+    </script>
+</body>
+</html>

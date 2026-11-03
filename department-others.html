@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แผนกวิชาอื่นๆ - วิทยาลัยเทคนิคนางรอง</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 🔗 ลิงก์เชื่อมโยงกับไฟล์สีหลังบ้าน -->
+    <link rel="stylesheet" href="style.css">
+    <script> tailwind.config = { darkMode: 'class' } </script>
+</head>
+<body class="transition-colors duration-300">
+
+    <!-- เมนูหลัก -->
+    <nav class="theme-nav text-white p-4 flex justify-between items-center sticky top-0 shadow-lg z-50">
+        <h1 class="font-bold text-xl theme-text-accent">วิทยาลัยเทคนิคนางรอง</h1>
+        <div class="flex items-center space-x-4">
+            <a href="index.html" class="hover:opacity-80">หน้าแรก</a>
+            <a href="map.html" class="hover:opacity-80">แผนที่ & ผัง</a>
+            <a href="contact.html" class="hover:opacity-80">ติดต่อเรา</a>
+            <button onclick="toggleDarkMode()" class="p-2 border rounded-lg text-sm bg-black/20 hover:bg-black/40">🌙 / ☀️ โหมด</button>
+        </div>
+    </nav>
+
+    <!-- ส่วนหัวข้อหลัก -->
+    <header class="max-w-4xl mx-auto my-8 p-8 theme-card rounded-xl shadow-md border text-center">
+        <h2 class="text-3xl font-extrabold mb-2 theme-text-accent">⚙️ แผนกวิชาอื่นๆ ที่เปิดสอน</h2>
+        <p class="theme-text-muted">วิทยาลัยเทคนิคนางรอง (หลักสูตรประกาศนียบัตรวิชาชีพ (ปวช.) และประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.))</p>
+    </header>
+
+    <!-- รายชื่อแผนกวิชาต่างๆ -->
+    <section class="max-w-4xl mx-auto my-8 p-6 theme-card rounded-xl shadow-md border">
+        <h3 class="text-2xl font-bold theme-text-accent mb-6 border-b pb-2">📚 สาขาวิชาและแผนกช่างอุตสาหกรรม / พาณิชยกรรม</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- แผนกที่ 1 -->
+            <div class="p-5 rounded-xl border theme-card shadow-sm">
+                <h4 class="font-bold text-lg mb-2 text-emerald-600 dark:text-emerald-400">🚗 ช่างยนต์</h4>
+                <p class="theme-text-muted text-sm">เรียนรู้เกี่ยวกับการบำรุงรักษาเครื่องยนต์ ระบบยานยนต์สมัยใหม่ ระบบหัวฉีด และเทคโนโลยียานยนต์ไฟฟ้า (EV)</p>
+            </div>
+
+            <!-- แผนกที่ 2 -->
+            <div class="p-5 rounded-xl border theme-card shadow-sm">
+                <h4 class="font-bold text-lg mb-2 text-emerald-600 dark:text-emerald-400">⚡ ช่างไฟฟ้ากำลัง</h4>
+                <p class="theme-text-muted text-sm">ศึกษาเกี่ยวกับการติดตั้งระบบไฟฟ้า  ตู้ควบคุมไฟฟ้า มอเตอร์ไฟฟ้า และระบบพลังงานทดแทน</p>
+            </div>
+
+            <!-- แผนกที่ 3 -->
+            <div class="p-5 rounded-xl border theme-card shadow-sm">
+                <h4 class="font-bold text-lg mb-2 text-emerald-600 dark:text-emerald-400">💡 ช่างอิเล็กทรอนิกส์</h4>
+                <p class="theme-text-muted text-sm">เรียนรู้งานไมโครคอนโทรลเลอร์ ระบบเสียง ระบบภาพ และการซ่อมแซมอุปกรณ์อิเล็กทรอนิกส์ต่างๆ</p>
+            </div>
+
+            <!-- แผนกที่ 4 -->
+            <div class="p-5 rounded-xl border theme-card shadow-sm">
+                <h4 class="font-bold text-lg mb-2 text-emerald-600 dark:text-emerald-400">⚙️ ช่างกลโรงงาน</h4>
+                <p class="theme-text-muted text-sm">เน้นทักษะการใช้เครื่องมือกล งานกลึง กัด ไส การเชื่อมอุตสาหกรรม และการเขียนแบบด้วยคอมพิวเตอร์ (CAD/CAM)</p>
+            </div>
+
+            <!-- แผนกที่ 5 -->
+            <div class="p-5 rounded-xl border theme-card shadow-sm">
+                <h4 class="font-bold text-lg mb-2 text-emerald-600 dark:text-emerald-400">🏗️ ช่างก่อสร้าง / โยธา</h4>
+                <p class="theme-text-muted text-sm">ศึกษาเกี่ยวกับการออกแบบงานก่อสร้าง การประมาณราคา การควบคุมงานก่อสร้าง และการสำรวจพื้นที่</p>
+            </div>
+
+            <!-- แผนกที่ 6 -->
+            <div class="p-5 rounded-xl border theme-card shadow-sm">
+                <h4 class="font-bold text-lg mb-2 text-emerald-600 dark:text-emerald-400">📊 การบัญชี / บริหารธุรกิจ</h4>
+                <p class="theme-text-muted text-sm">เรียนรู้ระบบบัญชีธุรกิจ การเงิน การจัดการสำนักงาน และโปรแกรมสำเร็จรูปทางบัญชียุคดิจิทัล</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ข้อมูลติดต่อและลิงก์ -->
+    <section class="max-w-4xl mx-auto my-8 p-6 theme-card rounded-xl shadow-md border text-center">
+        <h3 class="text-2xl font-bold theme-text-accent mb-4 border-b pb-2">📞 สนใจสมัครเรียนหรือสอบถามข้อมูล</h3>
+        <p class="theme-text-muted mb-6">สามารถติดต่อสอบถามรายละเอียดหลักสูตร การรับสมัครนักศึกษาใหม่ ได้ที่งานประชาสัมพันธ์ วิทยาลัยเทคนิคนางรอง</p>
+        <a href="contact.html" class="inline-block theme-btn-primary font-bold py-3 px-8 rounded-xl shadow-lg transition">
+            📞 ติดต่อสอบถามเพิ่มเติม
+        </a>
+    </section>
+
+    <!-- ปุ่มย้อนกลับหน้าแรก -->
+    <div class="max-w-4xl mx-auto my-8 text-center">
+        <a href="index.html" class="inline-block theme-btn-accent py-2 px-6 rounded-lg font-bold shadow transition">⬅️ กลับสู่หน้าแรก</a>
+    </div>
+
+    <!-- สคริปต์สลับ Dark/Light Mode -->
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+    </script>
+</body>
+</html>

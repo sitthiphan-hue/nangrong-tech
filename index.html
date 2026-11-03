@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วิทยาลัยเทคนิคนางรอง</title> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 🔗 ลิงก์เชื่อมโยงกับไฟล์สีหลังบ้าน -->
+    <link rel="stylesheet" href="style.css">
+    <script> tailwind.config = { darkMode: 'class' } </script>
+</head>
+<body class="transition-colors duration-300 font-sans">
+
+    <!-- เมนูหลัก Navbar มินิมอล -->
+    <nav class="theme-nav text-white p-4 flex justify-between items-center sticky top-0 shadow-md z-50 backdrop-blur-md">
+        <h1 class="font-bold text-lg md:text-xl theme-text-accent tracking-wide">วิทยาลัยเทคนิคนางรอง</h1>
+        <div class="flex items-center space-x-3 text-xs md:text-sm">
+            <a href="index.html" class="underline font-bold theme-text-accent">หน้าแรก</a>
+            <a href="history.html" class="hover:opacity-85 transition">ประวัติวิทยาลัย</a>
+            <a href="facilities.html" class="hover:opacity-85 transition">สิ่งอำนวยความสะดวก</a>
+            <a href="buildings.html" class="hover:opacity-85 transition">ทำเนียบอาคาร</a>
+            <a href="map.html" class="hover:opacity-85 transition">แผนที่ & ผัง</a>
+            <a href="gallery.html" class="hover:opacity-85 transition">แกลเลอรี</a>
+            <a href="contact.html" class="hover:opacity-85 transition">ติดต่อเรา</a>
+            <!-- โหมดมืด/สว่าง -->
+            <button onclick="toggleDarkMode()" class="p-1.5 px-3 border rounded-lg text-xs bg-black/20 hover:bg-black/40 transition">🌙 / ☀️</button>
+        </div>
+    </nav>
+
+    <!-- แบนเนอร์ มินิมอล -->
+    <header class="text-center py-10 theme-card px-4 border-b">
+        <img src="img/OIP.webp" class="w-full max-w-3xl h-56 md:h-64 object-cover mx-auto rounded-2xl shadow-md mb-5 border" alt="วิทยาลัยเทคนิคนางรอง">
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-1 theme-text-accent tracking-tight">ยินดีต้อนรับสู่วิทยาลัยเทคนิคนางรอง</h2>
+        <p class="text-sm md:text-base theme-text-muted">มุ่งมั่นพัฒนาวิชาชีพ ก้าวไกลสู่อนาคต</p>
+    </header>
+
+    <!-- เมนูลัดหลัก 1-7 เรียงแถวแนวตั้ง มินิมอล ใช้งานง่าย -->
+    <main class="max-w-3xl mx-auto my-8 px-4">
+        <h3 class="text-xs font-semibold uppercase tracking-wider theme-text-muted mb-3 px-1">เมนูแนะนำ & การเข้าถึงด่วน</h3>
+        
+        <div class="flex flex-col space-y-2.5">
+            <!-- 1. รายละเอียดวิทยาลัย -->
+            <a href="index.html#about" class="theme-btn-primary p-3.5 px-5 rounded-xl shadow-sm hover:shadow-md transition text-left flex items-center justify-between group">
+                <div class="flex items-center space-x-3">
+                    <span class="font-bold opacity-75">1.</span>
+                    <span>📖 รายละเอียดและหลักสูตรวิทยาลัย</span>
+                </div>
+                <span class="text-xs opacity-60 group-hover:translate-x-1 transition-transform">➔</span>
+            </a>
+
+            <!-- 2. ประวัติวิทยาลัย -->
+            <a href="history.html" class="theme-btn-secondary p-3.5 px-5 rounded-xl shadow-sm hover:shadow-md transition text-left flex items-center justify-between group">
+                <div class="flex items-center space-x-3">
+                    <span class="font-bold opacity-75">2.</span>
+                    <span>📜 ประวัติความเป็นมาวิทยาลัย</span>
+                </div>
+                <span class="text-xs opacity-60 group-hover:translate-x-1 transition-transform">➔</span>
+            </a>
+
+            <!-- 3. สิ่งอำนวยความสะดวก -->
+            <a href="facilities.html" class="theme-btn-secondary p-3.5 px-5 rounded-xl shadow-sm hover:shadow-md transition text-left flex items-center justify-between group">
+                <div class="flex items-center space-x-3">
+                    <span class="font-bold opacity-75">3.</span>
+                    <span>✨ สิ่งอำนวยความสะดวกในวิทยาลัย</span>
+                </div>
+                <span class="text-xs opacity-60 group-hover:translate-x-1 transition-transform">➔</span>
+            </a>
+
+            <!-- 4. ทำเนียบอาคาร -->
+            <a href="buildings.html" class="theme-btn-secondary p-3.5 px-5 rounded-xl shadow-sm hover:shadow-md transition text-left flex items-center justify-between group">
+                <div class="flex items-center space-x-3">
+                    <span class="font-bold opacity-75">4.</span>
+                    <span>🏢 ทำเนียบอาคารและสถานที่</span>
+                </div>
+                <span class="text-xs opacity-60 group-hover:translate-x-1 transition-transform">➔</span>
+            </a>
+
+            <!-- 5. แผนที่และผัง -->
+            <a href="map.html" class="theme-btn-secondary p-3.5 px-5 rounded-xl shadow-sm hover:shadow-md transition text-left flex items-center justify-between group">
+                <div class="flex items-center space-x-3">
+                    <span class="font-bold opacity-75">5.</span>
+                    <span>🗺️ แผนที่และผังวิทยาลัย</span>
+                </div>
+                <span class="text-xs opacity-60 group-hover:translate-x-1 transition-transform">➔</span>
+            </a>
+
+            <!-- 6. แกลเลอรี -->
+            <a href="gallery.html" class="theme-btn-secondary p-3.5 px-5 rounded-xl shadow-sm hover:shadow-md transition text-left flex items-center justify-between group">
+                <div class="flex items-center space-x-3">
+                    <span class="font-bold opacity-75">6.</span>
+                    <span>📸 แกลเลอรีภาพกิจกรรม</span>
+                </div>
+                <span class="text-xs opacity-60 group-hover:translate-x-1 transition-transform">➔</span>
+            </a>
+
+            <!-- 7. ข้อมูลติดต่อ -->
+            <a href="contact.html" class="theme-btn-primary p-3.5 px-5 rounded-xl shadow-sm hover:shadow-md transition text-left flex items-center justify-between group">
+                <div class="flex items-center space-x-3">
+                    <span class="font-bold opacity-75">7.</span>
+                    <span>📞 ข้อมูลการติดต่อวิทยาลัย</span>
+                </div>
+                <span class="text-xs opacity-60 group-hover:translate-x-1 transition-transform">➔</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- รายละเอียด และ 2 ปุ่มแผนกวิชา -->
+    <section id="about" class="max-w-3xl mx-auto my-10 p-6 theme-card rounded-2xl shadow-sm border">
+        <h3 class="text-xl font-bold theme-text-accent mb-3 border-b pb-2">รายละเอียดและหลักสูตรที่เปิดสอน</h3>
+        <p class="mb-6 theme-text-muted text-sm leading-relaxed">วิทยาลัยเทคนิคนางรอง เปิดสอนระดับ ปวช. และ ปวส. ในสาขาวิชาช่างอุตสาหกรรม พณิชยกรรม และเทคโนโลยีสารสนเทศ</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+            <!-- 📂 รูปตรงหมวดแผนก (คงไว้ตามเดิม) -->
+            <img src="img/แผนก.webp" class="rounded-xl shadow-sm h-44 w-full object-cover border" alt="การเรียนการสอน">
+            
+            <!-- 🎓 2 ปุ่มเลือกแผนก -->
+            <div class="space-y-3">
+                <h4 class="font-bold text-sm theme-text-muted uppercase tracking-wider">📌 เลือกดูสาขาวิชาและแผนก:</h4>
+                
+                <!-- ปุ่มที่ 1: แผนกคอมพิวเตอร์ -->
+                <a href="department-computer.html" class="block w-full text-center theme-btn-primary py-3 px-4 rounded-xl font-bold shadow-sm hover:shadow transition text-sm">
+                    💻 แผนกวิชาคอมพิวเตอร์
+                </a>
+                
+                <!-- ปุ่มที่ 2: แผนกอื่นๆ -->
+                <a href="department-others.html" class="block w-full text-center theme-btn-accent py-3 px-4 rounded-xl font-bold shadow-sm hover:shadow transition text-sm">
+                    ⚙️ แผนกอื่นๆ (ช่างยนต์, ไฟฟ้า, บัญชี ฯลฯ)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- สคริปต์สลับ Dark/Light Mode -->
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+    </script>
+</body>
+</html>

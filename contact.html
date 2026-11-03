@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ติดต่อเรา - วิทยาลัยเทคนิคนางรอง</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 🔗 ลิงก์เชื่อมโยงกับไฟล์สีหลังบ้าน -->
+    <link rel="stylesheet" href="style.css">
+    <script> tailwind.config = { darkMode: 'class' } </script>
+</head>
+<body class="transition-colors duration-300">
+
+    <nav class="theme-nav text-white p-4 flex justify-between items-center sticky top-0 shadow-lg z-50">
+        <h1 class="font-bold text-xl theme-text-accent">วิทยาลัยเทคนิคนางรอง</h1>
+        <div class="flex items-center space-x-4">
+            <a href="index.html" class="hover:opacity-80">หน้าแรก & รายละเอียด</a>
+            <a href="map.html" class="hover:opacity-80">แผนที่ & ผัง</a>
+            <a href="contact.html" class="underline font-bold theme-text-accent">ติดต่อเรา</a>
+            <button onclick="toggleDarkMode()" class="p-2 border rounded-lg text-sm bg-black/20 hover:bg-black/40">🌙 / ☀️ โหมด</button>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto my-8 p-6 theme-card rounded-xl shadow-md border">
+        <h2 class="text-2xl font-bold theme-text-accent mb-6 border-b pb-2">ข้อมูลการติดต่อ</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-4 theme-text-muted">
+                <p>📍 <strong>ที่อยู่:</strong> วิทยาลัยเทคนิคนางรอง อ.นางรอง จ.บุรีรัมย์ 31110</p>
+                <p>📞 <strong>โทรศัพท์:</strong> 0-4463-1556, 0-4463-2318</p>
+                <p>🌐 <strong>ติดตามเพจ Facebook:</strong>งานประชาสัมพันธ์วิทยาลัยเทคนิคนางรอง </p>
+            </div>
+
+            <form class="space-y-3 p-4 rounded-lg border theme-card" onsubmit="alert('ส่งข้อความเรียบร้อยแล้ว!'); return false;">
+                <h3 class="font-bold theme-text-accent">ฝากข้อความติดต่อ</h3>
+                <input type="text" placeholder="ชื่อ-นามสกุล" required class="w-full p-2.5 rounded border border-slate-300 dark:border-slate-700 bg-transparent">
+                <input type="email" placeholder="อีเมล / เบอร์โทร" required class="w-full p-2.5 rounded border border-slate-300 dark:border-slate-700 bg-transparent">
+                <textarea placeholder="ข้อความที่ต้องการสอบถาม..." rows="3" required class="w-full p-2.5 rounded border border-slate-300 dark:border-slate-700 bg-transparent"></textarea>
+                <button type="submit" class="w-full theme-btn-primary font-bold py-2.5 rounded-lg transition">ส่งข้อความ</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+    </script>
+</body>
+</html>

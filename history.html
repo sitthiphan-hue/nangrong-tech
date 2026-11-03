@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติความเป็นมา - วิทยาลัยเทคนิคนางรอง</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 🔗 ลิงก์เชื่อมโยงกับไฟล์สีหลังบ้าน -->
+    <link rel="stylesheet" href="style.css">
+    <script> tailwind.config = { darkMode: 'class' } </script>
+</head>
+<body class="transition-colors duration-300">
+
+    <!-- เมนูหลัก -->
+    <nav class="theme-nav text-white p-4 flex justify-between items-center sticky top-0 shadow-lg z-50">
+        <h1 class="font-bold text-xl theme-text-accent">วิทยาลัยเทคนิคนางรอง</h1>
+        <div class="flex items-center space-x-3 text-sm md:text-base">
+            <a href="index.html" class="hover:opacity-85">หน้าแรก</a>
+            <a href="history.html" class="underline font-bold theme-text-accent">ประวัติวิทยาลัย</a>
+            <a href="buildings.html" class="hover:opacity-85">ทำเนียบอาคาร</a>
+            <a href="map.html" class="hover:opacity-85">แผนที่ & ผัง</a>
+            <a href="gallery.html" class="hover:opacity-85">แกลเลอรี</a>
+            <a href="contact.html" class="hover:opacity-85">ติดต่อเรา</a>
+            <button onclick="toggleDarkMode()" class="p-2 border rounded-lg text-xs bg-black/20 hover:bg-black/40">🌙 / ☀️ โหมด</button>
+        </div>
+    </nav>
+
+    <!-- ส่วนหัวข้อหลัก -->
+    <header class="max-w-4xl mx-auto my-8 p-8 theme-card rounded-xl shadow-md border text-center">
+        <img src="img/OIP.webp" class="w-full max-w-2xl h-56 object-cover mx-auto rounded-xl shadow-lg mb-6 border" alt="วิทยาลัยเทคนิคนางรอง">
+        <h2 class="text-3xl font-extrabold mb-2 theme-text-accent">📜 ประวัติความเป็นมาวิทยาลัยเทคนิคนางรอง</h2>
+        <p class="theme-text-muted">ความเป็นมาและพัฒนาการของสถานศึกษาแห่งความภาคภูมิใจ</p>
+    </header>
+
+    <!-- เนื้อหาประวัติวิทยาลัย -->
+    <section class="max-w-4xl mx-auto my-8 p-6 theme-card rounded-xl shadow-md border space-y-6">
+        <div>
+            <h3 class="text-2xl font-bold theme-text-accent mb-3 border-b pb-2">🏛️ ข้อมูลพื้นฐานและการจัดตั้ง</h3>
+            <p class="theme-text-muted leading-relaxed mb-4">
+                <strong>วิทยาลัยเทคนิคนางรอง</strong> ตั้งอยู่บนพื้นที่อำเภอนางรอง จังหวัดบุรีรัมย์ เป็นสถานศึกษาในสังกัดสำนักงานคณะกรรมการการอาชีวศึกษา (สอศ.) กระทรวงศึกษาธิการ ที่มุ่งเน้นการผลิตและพัฒนากำลังคนด้านวิชาชีพให้มีคุณภาพ ทักษะฝีมือ และคุณธรรมจริยธรรม เพื่อตอบสนองความต้องการของตลาดแรงงานและภาคอุตสาหกรรมในยุคปัจจุบัน
+            </p>
+        </div>
+
+        <div>
+            <h3 class="text-2xl font-bold theme-text-accent mb-3 border-b pb-2">🎯 วิสัยทัศน์ (Vision)</h3>
+            <div class="p-4 rounded-xl border theme-card bg-emerald-50/50 dark:bg-emerald-950/20">
+                <p class="font-semibold text-center theme-text-accent">
+                    "มุ่งมั่นพัฒนาวิชาชีพ สู่มาตรฐานสากล บนพื้นฐานหลักปรัชญาของเศรษฐกิจพอเพียง"
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="text-2xl font-bold theme-text-accent mb-3 border-b pb-2">🎯 พันธกิจ (Mission)</h3>
+            <ul class="list-disc list-inside space-y-2 theme-text-muted text-sm md:text-base">
+                <li>จัดการศึกษาด้านวิชาชีพทั้งระดับประกาศนียบัตรวิชาชีพ (ปวช.) และระดับประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) ให้มีคุณภาพตามมาตรฐานวิชาชีพ</li>
+                <li>ส่งเสริมและสนับสนุนการวิจัย การสร้างนวัตกรรม สิ่งประดิษฐ์ และการบริการวิชาชีพสู่ชุมชน</li>
+                <li>ปลูกฝังคุณธรรม จริยธรรม และความมีวินัยให้กับนักเรียน นักศึกษา เพื่อให้เป็นบัณฑิตนักปฏิบัติที่มีคุณภาพ</li>
+                <li>สร้างความร่วมมือกับภาคราชการ ภาคเอกชน และสถานประกอบการในการจัดการเรียนการสอนทักษะวิชาชีพ</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ปุ่มย้อนกลับ -->
+    <div class="max-w-4xl mx-auto my-8 text-center space-x-3">
+        <a href="index.html" class="inline-block theme-btn-primary py-2.5 px-6 rounded-lg font-bold shadow transition">⬅️ กลับสู่หน้าแรก</a>
+        <a href="buildings.html" class="inline-block theme-btn-accent py-2.5 px-6 rounded-lg font-bold shadow transition">🏢 ดูทำเนียบอาคาร</a>
+    </div>
+
+    <!-- สคริปต์สลับ Dark/Light Mode -->
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+    </script>
+</body>
+</html>
