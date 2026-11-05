@@ -9,50 +9,73 @@
     <link rel="stylesheet" href="style.css">
     <script> tailwind.config = { darkMode: 'class' } </script>
 </head>
-<body class="transition-colors duration-300">
+<body class="transition-colors duration-300 font-sans antialiased">
 
-    <nav class="theme-nav text-white p-4 flex justify-between items-center sticky top-0 shadow-lg z-50">
-        <h1 class="font-bold text-xl theme-text-accent">วิทยาลัยเทคนิคนางรอง</h1>
-        <div class="flex items-center space-x-4">
-            <a href="index.html" class="hover:opacity-80">หน้าแรก</a>
-            <a href="buildings.html" class="hover:opacity-80">ทำเนียบอาคาร</a>
-            <a href="map.html" class="underline font-bold theme-text-accent">แผนที่ & ผัง</a>
-            <a href="contact.html" class="hover:opacity-80">ติดต่อเรา</a>
-            <button onclick="toggleDarkMode()" class="p-2 border rounded-lg text-sm bg-black/20 hover:bg-black/40">🌙 / ☀️ โหมด</button>
+    <!-- 🌐 เมนูหลัก Navbar: คลิกที่ชื่อวิทยาลัยเพื่อกลับหน้าแรก -->
+    <nav class="theme-nav text-white px-6 py-4 flex justify-between items-center sticky top-0 shadow-md z-50 backdrop-blur-md bg-opacity-95">
+        <a href="index.html" class="flex items-center space-x-2 hover:opacity-85 transition">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 inline-block"></span>
+            <h1 class="font-bold text-base md:text-xl theme-text-accent tracking-tight">วิทยาลัยเทคนิคนางรอง</h1>
+        </a>
+        
+        <div class="hidden md:flex items-center space-x-2 text-xs md:text-sm font-medium">
+            <a href="index.html" class="hover:opacity-85 transition px-3 py-1.5">หน้าแรก</a>
+            <a href="history.html" class="hover:opacity-85 transition px-3 py-1.5">ประวัติวิทยาลัย</a>
+            <a href="facilities.html" class="hover:opacity-85 transition px-3 py-1.5">สิ่งอำนวยความสะดวก</a>
+            <a href="buildings.html" class="hover:opacity-85 transition px-3 py-1.5">ทำเนียบอาคาร</a>
+            <a href="map.html" class="underline font-bold theme-text-accent px-3 py-1.5 rounded-lg bg-black/10 dark:bg-white/10">แผนที่ & ผัง</a>
+            <a href="gallery.html" class="hover:opacity-85 transition px-3 py-1.5">แกลเลอรี</a>
+            <a href="contact.html" class="hover:opacity-85 transition px-3 py-1.5">ติดต่อเรา</a>
+        </div>
+
+        <div class="flex items-center space-x-2">
+            <!-- ปุ่มเปลี่ยนโหมดมืด/สว่าง -->
+            <button onclick="toggleDarkMode()" class="p-1.5 px-3 border rounded-xl text-xs bg-black/20 hover:bg-black/40 transition">🌙 / ☀️</button>
         </div>
     </nav>
 
-    <div class="max-w-4xl mx-auto my-8 p-6 theme-card rounded-xl shadow-md border">
-        <div class="flex justify-between items-center mb-6 border-b pb-2">
-            <h2 class="text-2xl font-bold theme-text-accent">แผนที่และผังวิทยาลัย</h2>
-            <!-- 🔗 ปุ่มลิงก์ไปหน้าทำเนียบอาคาร -->
-            <a href="buildings.html" class="theme-btn-accent text-sm py-1.5 px-4 rounded-lg font-bold shadow transition">
-                🏢 ดูทำเนียบอาคารและห้องเรียน ➡️
-            </a>
-        </div>
-
-        <div class="mb-8">
-            <h3 class="font-bold text-lg mb-2">ผังอาคารภายในวิทยาลัย</h3>
-            <!-- 📂 ปรับขนาดรูปแผนผังตามสัดส่วน 2048x1364 ให้แสดงผลเต็มตา ไม่ถูกตัด -->
-            <img src="img/แผนผัง.1.jpg" width="2048" height="1364" class="w-full h-auto max-h-[600px] object-contain mx-auto rounded-lg shadow border mb-2 bg-black/5" alt="ผังวิทยาลัยเทคนิคนางรอง">
-            <p class="text-sm text-center theme-text-muted">ภาพจำลองผังอาคารเรียนและศูนย์ฝึกปฏิบัติงาน วิทยาลัยเทคนิคนางรอง</p>
-        </div>
-
-        <div>
-            <h3 class="font-bold text-lg mb-2">พิกัดแผนที่ (Google Maps)</h3>
-            <div class="w-full h-64 bg-slate-200 dark:bg-slate-700 rounded-lg overflow-hidden shadow mb-4">
-                <iframe class="w-full h-full border-0" src="https://maps.google.com/maps?q=วิทยาลัยเทคนิคนางรอง&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+    <!-- เนื้อหาหลัก -->
+    <main class="max-w-4xl mx-auto my-8 px-4">
+        <div class="theme-card p-6 md:p-8 rounded-3xl shadow-md border space-y-8">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b pb-4">
+                <h2 class="text-2xl md:text-3xl font-extrabold theme-text-accent">🗺️ แผนที่และผังวิทยาลัย</h2>
+                <!-- 🔗 ปุ่มลิงก์ไปหน้าทำเนียบอาคาร -->
+                <a href="buildings.html" class="theme-btn-accent text-xs md:text-sm py-2 px-4 rounded-xl font-bold shadow transition">
+                    🏢 ดูทำเนียบอาคารและห้องเรียน ➡️
+                </a>
             </div>
-            <a href="https://maps.google.com/?q=วิทยาลัยเทคนิคนางรอง" target="_blank" class="inline-block theme-btn-primary px-6 py-2.5 rounded-lg font-bold shadow transition">📍 นำทางด้วย Google Maps</a>
+
+            <!-- ผังอาคารภายใน -->
+            <div>
+                <h3 class="font-bold text-lg mb-3 theme-text-accent">ผังอาคารภายในวิทยาลัย</h3>
+                <div class="overflow-hidden rounded-2xl border bg-black/5 dark:bg-white/5 p-2 shadow-sm">
+                    <!-- 📂 ปรับขนาดรูปแผนผังตามสัดส่วน 2048x1364 ให้แสดงผลเต็มตา ไม่ถูกตัด -->
+                    <img src="img/แผนผัง.1.jpg" width="2048" height="1364" class="w-full h-auto max-h-[600px] object-contain mx-auto rounded-xl" alt="ผังวิทยาลัยเทคนิคนางรอง">
+                </div>
+                <p class="text-xs md:text-sm text-center theme-text-muted mt-3">ภาพจำลองผังอาคารเรียนและศูนย์ฝึกปฏิบัติงาน วิทยาลัยเทคนิคนางรอง</p>
+            </div>
+
+            <!-- พิกัด Google Maps -->
+            <div class="border-t pt-6">
+                <h3 class="font-bold text-lg mb-3 theme-text-accent">📍 พิกัดแผนที่ (Google Maps)</h3>
+                <div class="w-full h-72 bg-slate-200 dark:bg-slate-700 rounded-2xl overflow-hidden shadow-sm mb-4 border">
+                    <iframe class="w-full h-full border-0" src="https://maps.google.com/maps?q=วิทยาลัยเทคนิคนางรอง&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+                </div>
+                <a href="https://maps.google.com/?q=วิทยาลัยเทคนิคนางรอง" target="_blank" class="inline-block theme-btn-primary px-6 py-3 rounded-xl font-bold shadow transition text-sm">
+                    📍 เปิดนำทางด้วย Google Maps
+                </a>
+            </div>
         </div>
+    </main>
+
+    <!-- 🔙 ปุ่มย้อนกลับด้านล่าง -->
+    <div class="max-w-4xl mx-auto my-8 px-4 text-center">
+        <button onclick="history.back()" class="theme-btn-primary py-2.5 px-8 rounded-xl font-bold shadow-sm hover:shadow transition inline-flex items-center space-x-2 text-sm">
+            <span>⬅️ ย้อนกลับ</span>
+        </button>
     </div>
 
-    <!-- ปุ่มย้อนกลับด้านล่าง -->
-    <div class="max-w-4xl mx-auto my-8 text-center space-x-3">
-        <a href="buildings.html" class="inline-block theme-btn-primary py-2 px-6 rounded-lg font-bold shadow transition">🏢 ไปหน้าทำเนียบอาคาร</a>
-        <a href="index.html" class="inline-block theme-btn-accent py-2 px-6 rounded-lg font-bold shadow transition">⬅️ กลับสู่หน้าแรก</a>
-    </div>
-
+    <!-- สคริปต์สลับ Dark/Light Mode -->
     <script>
         function toggleDarkMode() {
             document.documentElement.classList.toggle('dark');

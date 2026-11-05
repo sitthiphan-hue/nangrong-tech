@@ -9,31 +9,40 @@
     <link rel="stylesheet" href="style.css">
     <script> tailwind.config = { darkMode: 'class' } </script>
 </head>
-<body class="transition-colors duration-300">
+<body class="transition-colors duration-300 font-sans antialiased">
 
-    <!-- เมนูหลัก -->
-    <nav class="theme-nav text-white p-4 flex justify-between items-center sticky top-0 shadow-lg z-50">
-        <h1 class="font-bold text-xl theme-text-accent">วิทยาลัยเทคนิคนางรอง</h1>
-        <div class="flex items-center space-x-3 text-sm md:text-base">
-            <a href="index.html" class="hover:opacity-85">หน้าแรก</a>
-            <a href="history.html" class="underline font-bold theme-text-accent">ประวัติวิทยาลัย</a>
-            <a href="buildings.html" class="hover:opacity-85">ทำเนียบอาคาร</a>
-            <a href="map.html" class="hover:opacity-85">แผนที่ & ผัง</a>
-            <a href="gallery.html" class="hover:opacity-85">แกลเลอรี</a>
-            <a href="contact.html" class="hover:opacity-85">ติดต่อเรา</a>
-            <button onclick="toggleDarkMode()" class="p-2 border rounded-lg text-xs bg-black/20 hover:bg-black/40">🌙 / ☀️ โหมด</button>
+    <!-- 🌐 เมนูหลัก Navbar: คลิกที่ชื่อวิทยาลัยเพื่อกลับหน้าแรก -->
+    <nav class="theme-nav text-white px-6 py-4 flex justify-between items-center sticky top-0 shadow-md z-50 backdrop-blur-md bg-opacity-95">
+        <a href="index.html" class="flex items-center space-x-2 hover:opacity-85 transition">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 inline-block"></span>
+            <h1 class="font-bold text-base md:text-xl theme-text-accent tracking-tight">วิทยาลัยเทคนิคนางรอง</h1>
+        </a>
+        
+        <div class="hidden md:flex items-center space-x-2 text-xs md:text-sm font-medium">
+            <a href="index.html" class="hover:opacity-85 transition px-3 py-1.5">หน้าแรก</a>
+            <a href="history.html" class="underline font-bold theme-text-accent px-3 py-1.5 rounded-lg bg-black/10 dark:bg-white/10">ประวัติวิทยาลัย</a>
+            <a href="facilities.html" class="hover:opacity-85 transition px-3 py-1.5">สิ่งอำนวยความสะดวก</a>
+            <a href="buildings.html" class="hover:opacity-85 transition px-3 py-1.5">ทำเนียบอาคาร</a>
+            <a href="map.html" class="hover:opacity-85 transition px-3 py-1.5">แผนที่ & ผัง</a>
+            <a href="gallery.html" class="hover:opacity-85 transition px-3 py-1.5">แกลเลอรี</a>
+            <a href="contact.html" class="hover:opacity-85 transition px-3 py-1.5">ติดต่อเรา</a>
+        </div>
+
+        <div class="flex items-center space-x-2">
+            <!-- ปุ่มเปลี่ยนโหมดมืด/สว่าง -->
+            <button onclick="toggleDarkMode()" class="p-1.5 px-3 border rounded-xl text-xs bg-black/20 hover:bg-black/40 transition">🌙 / ☀️</button>
         </div>
     </nav>
 
     <!-- ส่วนหัวข้อหลัก -->
-    <header class="max-w-4xl mx-auto my-8 p-8 theme-card rounded-xl shadow-md border text-center">
-        <img src="img/OIP.webp" class="w-full max-w-2xl h-56 object-cover mx-auto rounded-xl shadow-lg mb-6 border" alt="วิทยาลัยเทคนิคนางรอง">
+    <header class="max-w-4xl mx-auto my-8 p-8 theme-card rounded-3xl shadow-md border text-center">
+        <img src="img/OIP.webp" class="w-full max-w-2xl h-56 object-cover mx-auto rounded-2xl shadow-lg mb-6 border" alt="วิทยาลัยเทคนิคนางรอง">
         <h2 class="text-3xl font-extrabold mb-2 theme-text-accent">📜 ประวัติความเป็นมาวิทยาลัยเทคนิคนางรอง</h2>
         <p class="theme-text-muted">ความเป็นมาและพัฒนาการของสถานศึกษาแห่งความภาคภูมิใจ</p>
     </header>
 
     <!-- เนื้อหาประวัติวิทยาลัย -->
-    <section class="max-w-4xl mx-auto my-8 p-6 theme-card rounded-xl shadow-md border space-y-6">
+    <section class="max-w-4xl mx-auto my-8 p-6 md:p-8 theme-card rounded-3xl shadow-md border space-y-6">
         <div>
             <h3 class="text-2xl font-bold theme-text-accent mb-3 border-b pb-2">🏛️ ข้อมูลพื้นฐานและการจัดตั้ง</h3>
             <p class="theme-text-muted leading-relaxed mb-4">
@@ -43,7 +52,7 @@
 
         <div>
             <h3 class="text-2xl font-bold theme-text-accent mb-3 border-b pb-2">🎯 วิสัยทัศน์ (Vision)</h3>
-            <div class="p-4 rounded-xl border theme-card bg-emerald-50/50 dark:bg-emerald-950/20">
+            <div class="p-4 rounded-2xl border theme-card bg-emerald-50/50 dark:bg-emerald-950/20 shadow-sm">
                 <p class="font-semibold text-center theme-text-accent">
                     "มุ่งมั่นพัฒนาวิชาชีพ สู่มาตรฐานสากล บนพื้นฐานหลักปรัชญาของเศรษฐกิจพอเพียง"
                 </p>
@@ -52,7 +61,7 @@
 
         <div>
             <h3 class="text-2xl font-bold theme-text-accent mb-3 border-b pb-2">🎯 พันธกิจ (Mission)</h3>
-            <ul class="list-disc list-inside space-y-2 theme-text-muted text-sm md:text-base">
+            <ul class="list-disc list-inside space-y-2 theme-text-muted text-sm md:text-base leading-relaxed">
                 <li>จัดการศึกษาด้านวิชาชีพทั้งระดับประกาศนียบัตรวิชาชีพ (ปวช.) และระดับประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) ให้มีคุณภาพตามมาตรฐานวิชาชีพ</li>
                 <li>ส่งเสริมและสนับสนุนการวิจัย การสร้างนวัตกรรม สิ่งประดิษฐ์ และการบริการวิชาชีพสู่ชุมชน</li>
                 <li>ปลูกฝังคุณธรรม จริยธรรม และความมีวินัยให้กับนักเรียน นักศึกษา เพื่อให้เป็นบัณฑิตนักปฏิบัติที่มีคุณภาพ</li>
@@ -61,10 +70,11 @@
         </div>
     </section>
 
-    <!-- ปุ่มย้อนกลับ -->
-    <div class="max-w-4xl mx-auto my-8 text-center space-x-3">
-        <a href="index.html" class="inline-block theme-btn-primary py-2.5 px-6 rounded-lg font-bold shadow transition">⬅️ กลับสู่หน้าแรก</a>
-        <a href="buildings.html" class="inline-block theme-btn-accent py-2.5 px-6 rounded-lg font-bold shadow transition">🏢 ดูทำเนียบอาคาร</a>
+    <!-- 🔙 ปุ่มย้อนกลับด้านล่าง (ตามที่ขอ) -->
+    <div class="max-w-4xl mx-auto my-8 px-4 text-center">
+        <button onclick="history.back()" class="theme-btn-primary py-2.5 px-8 rounded-xl font-bold shadow-sm hover:shadow transition inline-flex items-center space-x-2 text-sm">
+            <span>⬅️ ย้อนกลับ</span>
+        </button>
     </div>
 
     <!-- สคริปต์สลับ Dark/Light Mode -->

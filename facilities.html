@@ -9,36 +9,45 @@
     <link rel="stylesheet" href="style.css">
     <script> tailwind.config = { darkMode: 'class' } </script>
 </head>
-<body class="transition-colors duration-300">
+<body class="transition-colors duration-300 font-sans antialiased">
 
-    <!-- เมนูหลัก -->
-    <nav class="theme-nav text-white p-4 flex justify-between items-center sticky top-0 shadow-lg z-50">
-        <h1 class="font-bold text-xl theme-text-accent">วิทยาลัยเทคนิคนางรอง</h1>
-        <div class="flex items-center space-x-3 text-sm md:text-base">
-            <a href="index.html" class="hover:opacity-85">หน้าแรก</a>
-            <a href="history.html" class="hover:opacity-85">ประวัติวิทยาลัย</a>
-            <a href="facilities.html" class="underline font-bold theme-text-accent">สิ่งอำนวยความสะดวก</a>
-            <a href="buildings.html" class="hover:opacity-85">ทำเนียบอาคาร</a>
-            <a href="map.html" class="hover:opacity-85">แผนที่ & ผัง</a>
-            <a href="contact.html" class="hover:opacity-85">ติดต่อเรา</a>
-            <button onclick="toggleDarkMode()" class="p-2 border rounded-lg text-xs bg-black/20 hover:bg-black/40">🌙 / ☀️ โหมด</button>
+    <!-- 🌐 เมนูหลัก Navbar: คลิกที่ชื่อวิทยาลัยเพื่อกลับหน้าแรก -->
+    <nav class="theme-nav text-white px-6 py-4 flex justify-between items-center sticky top-0 shadow-md z-50 backdrop-blur-md bg-opacity-95">
+        <a href="index.html" class="flex items-center space-x-2 hover:opacity-85 transition">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 inline-block"></span>
+            <h1 class="font-bold text-base md:text-xl theme-text-accent tracking-tight">วิทยาลัยเทคนิคนางรอง</h1>
+        </a>
+        
+        <div class="hidden md:flex items-center space-x-2 text-xs md:text-sm font-medium">
+            <a href="index.html" class="hover:opacity-85 transition px-3 py-1.5">หน้าแรก</a>
+            <a href="history.html" class="hover:opacity-85 transition px-3 py-1.5">ประวัติวิทยาลัย</a>
+            <a href="facilities.html" class="underline font-bold theme-text-accent px-3 py-1.5 rounded-lg bg-black/10 dark:bg-white/10">สิ่งอำนวยความสะดวก</a>
+            <a href="buildings.html" class="hover:opacity-85 transition px-3 py-1.5">ทำเนียบอาคาร</a>
+            <a href="map.html" class="hover:opacity-85 transition px-3 py-1.5">แผนที่ & ผัง</a>
+            <a href="gallery.html" class="hover:opacity-85 transition px-3 py-1.5">แกลเลอรี</a>
+            <a href="contact.html" class="hover:opacity-85 transition px-3 py-1.5">ติดต่อเรา</a>
+        </div>
+
+        <div class="flex items-center space-x-2">
+            <!-- ปุ่มเปลี่ยนโหมดมืด/สว่าง -->
+            <button onclick="toggleDarkMode()" class="p-1.5 px-3 border rounded-xl text-xs bg-black/20 hover:bg-black/40 transition">🌙 / ☀️</button>
         </div>
     </nav>
 
     <!-- ส่วนหัวข้อหลัก -->
-    <header class="max-w-5xl mx-auto my-8 p-8 theme-card rounded-xl shadow-md border text-center">
+    <header class="max-w-5xl mx-auto my-8 p-8 theme-card rounded-3xl shadow-md border text-center">
         <h2 class="text-3xl font-extrabold mb-2 theme-text-accent">✨ สิ่งอำนวยความสะดวกภายในวิทยาลัย</h2>
         <p class="theme-text-muted">ศูนย์รวมสิ่งอำนวยความสะดวกเพื่อสนับสนุนการเรียนรู้ สุขภาพ และชีวิตในวิทยาลัยเทคนิคนางรอง</p>
     </header>
 
     <!-- คลังสิ่งอำนวยความสะดวกจำแนกตามหมวดหมู่ -->
-    <section class="max-w-5xl mx-auto my-8 p-6 theme-card rounded-xl shadow-md border">
-        <h3 class="text-2xl font-bold theme-text-accent mb-6 border-b pb-2">📌 หมวดหมู่สิ่งอำนวยความสะดวก</h3>
+    <section class="max-w-5xl mx-auto my-8 p-6 md:p-8 theme-card rounded-3xl shadow-md border">
+        <h3 class="text-2xl font-bold theme-text-accent mb-6 border-b pb-3">📌 หมวดหมู่สิ่งอำนวยความสะดวก</h3>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
             <!-- 1. โรงอาหารกลาง & อาคารแพงพวย -->
-            <div class="theme-card rounded-xl border p-5 shadow-sm hover:shadow-md transition">
+            <div class="theme-card rounded-2xl border p-5 shadow-sm hover:shadow-md transition">
                 <div class="flex items-center space-x-3 mb-3">
                     <span class="text-3xl">🍲</span>
                     <div>
@@ -46,7 +55,7 @@
                         <p class="text-xs theme-text-muted">ศูนย์อาหารและเครื่องดื่มมาตรฐานสุขาภิบาล</p>
                     </div>
                 </div>
-                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted">
+                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted leading-relaxed">
                     <p>• ร้านจำหน่ายอาหารหลากหลาย ทั้งข้าวแกง ก๋วยเตี๋ยว และอาหารตามสั่ง</p>
                     <p>• ซุ้มจำหน่ายเครื่องดื่ม ผลไม้สด และของกินเล่นสำหรับนักศึกษา</p>
                     <p>• มีที่นั่งรองรับบุคลากรและนักศึกษาอย่างเพียงพอ ถูกสุขอนามัย</p>
@@ -54,7 +63,7 @@
             </div>
 
             <!-- 2. ร้านค้าสหกรณ์วิทยาลัย -->
-            <div class="theme-card rounded-xl border p-5 shadow-sm hover:shadow-md transition">
+            <div class="theme-card rounded-2xl border p-5 shadow-sm hover:shadow-md transition">
                 <div class="flex items-center space-x-3 mb-3">
                     <span class="text-3xl">🛒</span>
                     <div>
@@ -62,7 +71,7 @@
                         <p class="text-xs theme-text-muted">จุดบริการเครื่องเขียนและอุปกรณ์การเรียน</p>
                     </div>
                 </div>
-                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted">
+                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted leading-relaxed">
                     <p>• จำหน่ายอุปกรณ์การเรียน สมุด เครื่องเขียน และเครื่องมือทางช่าง</p>
                     <p>• เครื่องแบบนักเรียน-นักศึกษา เข็มตราสัญลักษณ์ และอุปกรณ์ประกอบเครื่องแบบ</p>
                     <p>• สินค้าอุปโภคบริโภคและขนมขบเคี้ยวในราคาถูก</p>
@@ -70,7 +79,7 @@
             </div>
 
             <!-- 3. ห้องสวัสดิการพยาบาล -->
-            <div class="theme-card rounded-xl border p-5 shadow-sm hover:shadow-md transition">
+            <div class="theme-card rounded-2xl border p-5 shadow-sm hover:shadow-md transition">
                 <div class="flex items-center space-x-3 mb-3">
                     <span class="text-3xl">🏥</span>
                     <div>
@@ -78,7 +87,7 @@
                         <p class="text-xs theme-text-muted">บริการดูแลสุขภาพเบื้องต้นและปฐมพยาบาล</p>
                     </div>
                 </div>
-                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted">
+                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted leading-relaxed">
                     <p>• บริการปฐมพยาบาลเบื้องต้น เตียงพักฟื้น ยา และเวชภัณฑ์พื้นฐาน</p>
                     <p>• จุดบริการรับชุดเครื่องแบบและอุปกรณ์การเรียนตามกำหนดการวิทยาลัย</p>
                     <p>• ประสานงานส่งต่อโรงพยาบาลในกรณีเจ็บป่วยฉุกเฉิน</p>
@@ -86,7 +95,7 @@
             </div>
 
             <!-- 4. ศูนย์เทคโนโลยีสารสนเทศ & ห้องสมุด -->
-            <div class="theme-card rounded-xl border p-5 shadow-sm hover:shadow-md transition">
+            <div class="theme-card rounded-2xl border p-5 shadow-sm hover:shadow-md transition">
                 <div class="flex items-center space-x-3 mb-3">
                     <span class="text-3xl">📖</span>
                     <div>
@@ -94,7 +103,7 @@
                         <p class="text-xs theme-text-muted">ศูนย์รวมแหล่งค้นคว้าและอินเทอร์เน็ตความเร็วสูง</p>
                     </div>
                 </div>
-                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted">
+                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted leading-relaxed">
                     <p>• บริการยืม-คืน หนังสือเรียน ตำราวิชาชีพ และวารสารวิชาการ</p>
                     <p>• ห้องปฏิบัติการ ComIT (1-4) สำหรับสืบค้นข้อมูลและใช้งานคอมพิวเตอร์</p>
                     <p>• สัญญาณ Wi-Fi ครอบคลุมพื้นที่การเรียนรู้</p>
@@ -102,7 +111,7 @@
             </div>
 
             <!-- 5. สนามกีฬา & โดมอเนกประสงค์ -->
-            <div class="theme-card rounded-xl border p-5 shadow-sm hover:shadow-md transition">
+            <div class="theme-card rounded-2xl border p-5 shadow-sm hover:shadow-md transition">
                 <div class="flex items-center space-x-3 mb-3">
                     <span class="text-3xl">⚽</span>
                     <div>
@@ -110,7 +119,7 @@
                         <p class="text-xs theme-text-muted">พื้นที่ออกกำลังกาย เล่นกีฬา และนันทนาการ</p>
                     </div>
                 </div>
-                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted">
+                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted leading-relaxed">
                     <p>• สนามฟุตบอลมาตรฐานสำหรับกิจกรรมการแข่งขันและพลศึกษา</p>
                     <p>• โดมอเนกประสงค์ (หลังเก่า/หลังใหม่) รองรับบาสเกตบอล วอลเลย์บอล และตะกร้อ</p>
                     <p>• ลานกิจกรรมเคารพธงชาติและเข้าแถวประจำวัน</p>
@@ -118,7 +127,7 @@
             </div>
 
             <!-- 6. ลานฝึกขับขี่ปลอดภัย & โรงจอดรถ -->
-            <div class="theme-card rounded-xl border p-5 shadow-sm hover:shadow-md transition">
+            <div class="theme-card rounded-2xl border p-5 shadow-sm hover:shadow-md transition">
                 <div class="flex items-center space-x-3 mb-3">
                     <span class="text-3xl">🛵</span>
                     <div>
@@ -126,7 +135,7 @@
                         <p class="text-xs theme-text-muted">บริการจราจรและการจอดยานพาหนะอย่างเป็นระเบียบ</p>
                     </div>
                 </div>
-                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted">
+                <div class="border-t pt-3 mt-2 text-sm space-y-2 theme-text-muted leading-relaxed">
                     <p>• โรงจอดรถจักรยานยนต์ขนาดใหญ่ มีหลังคาป้องกันแดดและฝน</p>
                     <p>• ลานฝึกขับขี่ปลอดภัย เสริมสร้างวินัยจราจรและทักษะการขับขี่</p>
                     <p>• เจ้าหน้าที่รักษาความปลอดภัยคอยดูแลและจัดระเบียบทางเข้า-ออก</p>
@@ -136,10 +145,11 @@
         </div>
     </section>
 
-    <!-- ปุ่มย้อนกลับและลิงก์เชื่อมโยง -->
-    <div class="max-w-4xl mx-auto my-8 text-center space-x-3">
-        <a href="buildings.html" class="inline-block theme-btn-primary py-2.5 px-6 rounded-lg font-bold shadow transition">🏢 ดูทำเนียบอาคาร</a>
-        <a href="index.html" class="inline-block theme-btn-accent py-2.5 px-6 rounded-lg font-bold shadow transition">⬅️ กลับสู่หน้าแรก</a>
+    <!-- 🔙 ปุ่มย้อนกลับด้านล่าง -->
+    <div class="max-w-4xl mx-auto my-8 px-4 text-center">
+        <button onclick="history.back()" class="theme-btn-primary py-2.5 px-8 rounded-xl font-bold shadow-sm hover:shadow transition inline-flex items-center space-x-2 text-sm">
+            <span>⬅️ ย้อนกลับ</span>
+        </button>
     </div>
 
     <!-- สคริปต์สลับ Dark/Light Mode -->
